@@ -83,7 +83,8 @@ legend("bottomleft", legend= c("ID8", "ID8p53KO"), col= c("purple", "red"),
        lty=c(1,1), pch= c(15,16), cex= 0.75)
 
 par(mfrow=c(2,2))
-EC50<- data.frame("Cell lines"= c("ID8", "ID8P53KO"), "EC50 in uM"=c(dr.ID8$coefficients["EC50:(Intercept)"],
-                                                                     dr.ID8$coefficients["EC50:(Intercept)"]))
+EC50<- data.frame("Cell lines"= c("ID8", "ID8P53KO"), 
+                  "EC50 in uM"=c(dr.ID8$coefficients["EC50:(Intercept)"],dr.ID8$coefficients["EC50:(Intercept)"])
+                 )
 EC50$EC50.in.uM <- round(EC50$EC50.in.uM, digits=2)
 
